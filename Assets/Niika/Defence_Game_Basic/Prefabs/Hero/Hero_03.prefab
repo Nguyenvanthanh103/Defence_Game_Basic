@@ -10,12 +10,13 @@ GameObject:
   m_Component:
   - component: {fileID: 3644185673344456949}
   - component: {fileID: 3888068560866351534}
-  - component: {fileID: 4576822700663079114}
   - component: {fileID: 4317511762156560324}
   - component: {fileID: 9158300348886390715}
+  - component: {fileID: 7197860020295745843}
+  - component: {fileID: 1615494908224986038}
   m_Layer: 0
   m_Name: Hero_03
-  m_TagString: Untagged
+  m_TagString: Hero
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -91,28 +92,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &4576822700663079114
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4074874209452059626}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b09ed1b33b9384477a76abcfb9dc0a31, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!50 &4317511762156560324
 Rigidbody2D:
   serializedVersion: 5
@@ -139,7 +118,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &9158300348886390715
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -186,6 +165,41 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.4815364, y: 2.556622}
   m_EdgeRadius: 0
+--- !u!95 &7197860020295745843
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4074874209452059626}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b09ed1b33b9384477a76abcfb9dc0a31, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1615494908224986038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4074874209452059626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdb3707b5c1ca4615b59f52b49e0b7e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackRate: 0
 --- !u!1 &7864164480071547442
 GameObject:
   m_ObjectHideFlags: 0

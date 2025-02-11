@@ -10,9 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 8414385259252576004}
   - component: {fileID: 1382902488241479079}
-  - component: {fileID: 2993625612497016024}
   - component: {fileID: 214610707697696757}
   - component: {fileID: 6126063224496907353}
+  - component: {fileID: 7332762342289493430}
+  - component: {fileID: 7016060312266702437}
   m_Layer: 0
   m_Name: Hero_01
   m_TagString: Untagged
@@ -91,28 +92,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &2993625612497016024
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 223400785950870223}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 8299e4708a2334ad59a734efd5cbb1ec, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!50 &214610707697696757
 Rigidbody2D:
   serializedVersion: 5
@@ -186,6 +165,41 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.4536737, y: 2.2316484}
   m_EdgeRadius: 0
+--- !u!95 &7332762342289493430
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 223400785950870223}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8299e4708a2334ad59a734efd5cbb1ec, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7016060312266702437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 223400785950870223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdb3707b5c1ca4615b59f52b49e0b7e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackRate: 5
 --- !u!1 &5659209405637619083
 GameObject:
   m_ObjectHideFlags: 0

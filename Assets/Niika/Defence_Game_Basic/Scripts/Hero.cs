@@ -1,17 +1,51 @@
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class Hero : MonoBehaviour
 {
-    float score;
+    private Animator anim;
+    public float attackRate;
+    private float curAttackRate;
+
+    private bool isAttacked = false ;
+
+    void Awake()
+    {
+        anim = GetComponent<Animator>();
+    }
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
     void Start()
     {
-        var scorePalyer = PlayerPrefs.GetFloat("score",0);
-        Debug.Log(scorePalyer);
+        
+        curAttackRate = attackRate;
     }
-    void Update(){
-        score +=10;
-        PlayerPrefs.SetFloat("score",score);
+
+    // Update is called once per frame
+    void Update()
+    {
+       if(Input.GetKeyDown(KeyCode.Space)){
+             HeroAttack();
+       }
     }
-    
+    private void HeroAttack(){
+         
+            if(anim) {
+                anim.SetBool(Const.ATTACK_ANIM,true);
+                isAttacked = true;
+            }
+       
+        if(isAttacked) {
+            curAttackRate-=Time.deltaTime;
+            if(curAttackRate<=0){
+                isAttacked = false;
+                
+                curAttackRate = attackRate;
+            }
+        }
+    }
+    private void ResetAttack(){
+        if(anim){
+            anim.SetBool(Const.ATTACK_ANIM,false);
+        }
+    }
 }
