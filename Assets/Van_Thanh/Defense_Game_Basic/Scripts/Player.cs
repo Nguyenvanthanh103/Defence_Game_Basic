@@ -8,6 +8,8 @@ namespace VanThanh.Defense_basic {
     private float curAtkRate;
     private bool isAttacked = false;
 
+    private bool isDeath = false;
+
     
     private void Awake()
     {
@@ -44,8 +46,11 @@ namespace VanThanh.Defense_basic {
 
         void OnTriggerEnter2D(Collider2D collision)
         {
-            if(collision.CompareTag(Const.ENEMY_WEAPON_TAG)){
+            if (IsComponentNull()) return;
+
+            if(collision.CompareTag(Const.ENEMY_WEAPON_TAG) && !isDeath){
                 anim.SetTrigger(Const.DEATH_ANIM);
+                isDeath = true;
             }
         }
     }

@@ -11,6 +11,8 @@ namespace VanThanh.Defense_basic {
         private float atkDistance = 1.4f;
         public float enemySpeed;
 
+        private bool isDeath = false;
+
         private void Awake()
         {
             
