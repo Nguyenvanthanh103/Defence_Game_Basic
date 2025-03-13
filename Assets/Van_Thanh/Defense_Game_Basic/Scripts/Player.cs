@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace VanThanh.Defense_basic {
@@ -8,7 +10,7 @@ namespace VanThanh.Defense_basic {
     private float curAtkRate;
     private bool isAttacked = false;
 
-    private bool isDeath = false;
+    public bool isDeath = false;
 
     
     private void Awake()
@@ -22,7 +24,7 @@ namespace VanThanh.Defense_basic {
     private void Update()
     {
         if(IsComponentNull()) return;
-        if(Input.GetMouseButtonDown(0)){
+        if(Input.GetKeyDown(KeyCode.Space)){
             if(anim) {
                 anim.SetBool(Const.ATTACK_ANIM,true);
             }
@@ -51,7 +53,20 @@ namespace VanThanh.Defense_basic {
             if(collision.CompareTag(Const.ENEMY_WEAPON_TAG) && !isDeath){
                 anim.SetTrigger(Const.DEATH_ANIM);
                 isDeath = true;
+                Destroy(gameObject,1.5f);
             }
         }
+        public string ReversePrefix(string word, char ch) {
+            string result = "";
+            Stack<char> stack = new Stack<char>();
+            for(int i=0;i<word.Length;i++){
+                if (word[i] == ch) return result;
+                if(word[i] != ch) {
+                    stack.Push(word[i]);
+                }
+                result += stack.Pop();
+            }
+            return result;
+    }
     }
 }

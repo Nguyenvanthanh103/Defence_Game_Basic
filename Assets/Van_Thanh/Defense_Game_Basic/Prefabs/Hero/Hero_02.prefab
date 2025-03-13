@@ -109,6 +109,7 @@ GameObject:
   - component: {fileID: 3766971884165004952}
   - component: {fileID: 3475155557495228238}
   - component: {fileID: 6531061064216802904}
+  - component: {fileID: -3649348440339454223}
   m_Layer: 0
   m_Name: Hero_02
   m_TagString: Hero
@@ -282,3 +283,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-3649348440339454223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9015336769975300133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3843c54cce56c4db1b674e3dc0ac9122, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  atkRate: 3

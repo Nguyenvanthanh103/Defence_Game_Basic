@@ -3,8 +3,8 @@ namespace VanThanh.Defense_basic {
 public class Const 
 {
 
-    public const string PLAYER_TAG = "hero";
-    public const string ENEMY_TAG = "enemy";
+    public const string PLAYER_TAG = "Hero";
+    public const string ENEMY_TAG = "Enemy";
 
     public const string PLAYER_WEAPON_TAG = "Hero_weapon";
     public const string ENEMY_WEAPON_TAG = "Enemy_weapon";
